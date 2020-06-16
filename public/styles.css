@@ -25,29 +25,48 @@ a{
     margin: auto;
 }
 .top-nav{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 8px ;
     max-width: 1000px;
-    width: 95%;
+    width: 98%;
     margin: auto;
     box-shadow: 0 0 1px white;
 }
+#menu-show-button, #menu-close-button{
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    transform: scale(0);
+    transition: 300ms all ease-in-out;
+    font-size: 1.5em;
+    /* display: none; */
+}
+
 .masthead > a{
     font-size: 1.5em;
 }
-.top-nav >ul{
+.resume-items{
     display: flex;
     justify-content: end;
     align-items: center;
     padding: 0 8px;
+    transform: scale(1);
+    transition: 250ms all ease-in-out;
 }
-.top-nav > ul > li{
+.resume-items > li{
     list-style-type: none;
-    padding: 0 12px;
+    padding: 0 16px;
     text-align: right;
     cursor: pointer;
+}
+.main-link{
+    letter-spacing: 1px;
+}
+.main-link:hover{
+    color:green;
 }
 
 .main-content{
@@ -55,6 +74,7 @@ a{
     max-width: 1000px;
     margin: auto;
     padding: 20px;
+    overflow:auto;
 }
 
 footer{
@@ -65,4 +85,47 @@ footer{
     padding: 10px 0;
     color: rgba(0, 0, 0, 0.596);
     font-size: .9em;
+}
+@media (max-width:700px){
+    #menu-show-button{
+        transform: scale(1);
+        transform: translateY(-50%);
+        cursor: pointer;
+        padding: 0 2px;
+        border: 1px solid rgba(0, 0, 0, 0.24);
+    }
+    .resume-items{
+        position: absolute;
+        right: 0;
+        top: 4px;
+        transform: scale(0);
+        flex-direction: column;
+        justify-content: start;
+        padding: 8px;
+        height: 250px;
+        width: 150px;
+        text-align: center;
+        z-index: 20;
+        background: lightblue;
+        box-shadow: 0 0 2px black;
+    }
+    .resume-items > li{
+        padding: 8px 0;
+    }
+    #menu-close-button{
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        padding: 0 2px;
+        border: 1px solid rgba(0, 0, 0, 0.24);
+        transform: scale(1);
+        font-size: .9em;
+        cursor: pointer;
+    }
+    .resume-items.show{
+        z-index: 20;
+        
+        transform: scale(1);
+    }
+
 }
