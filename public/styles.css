@@ -1,0 +1,63 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+}
+body{
+    background: lightblue;
+    width: 100%;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+    color: unset;
+}
+
+.app-wrapper{
+    position: relative;
+    min-height: 100vh;
+}
+.main-header{
+    width: 100%;
+    margin: auto;
+}
+.top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    max-width: 1000px;
+}
+.masthead > a{
+    font-size: 1.5em;
+}
+.top-nav >ul{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 0 8px;
+}
+.top-nav > ul > li{
+    list-style-type: none;
+    padding: 0 12px;
+    text-align: right;
+}
+
+.main-content{
+    width: 100%;
+    max-width: 100px;
+    padding: 20px;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.596);
+    font-size: .9em;
+}

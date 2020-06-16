@@ -1,18 +1,30 @@
 {
-  "name": "resumesqlite",
-  "version": "1.0.0",
-  "description": "Resume project using sqlite3 as an embedded database engine",
-  "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "resume",
-    "sqlite3",
-    "node",
-    "anil",
-    "bhattarai"
-  ],
-  "author": "Anil Bhattarai",
-  "license": "MIT"
+    "name": "resumesqlite",
+    "version": "1.0.0",
+    "description": "Resume project using sqlite3 as an embedded database engine",
+    "main": "app.js",
+    "scripts": {
+        "start": "npm run app.js",
+        "devStart": "nodemon run app.js"
+    },
+    "keywords": [
+        "resume",
+        "sqlite3",
+        "node",
+        "anil",
+        "bhattarai"
+    ],
+    "author": "Anil Bhattarai",
+    "license": "MIT",
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "ejs": "^3.1.3",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "sqlite3": "^4.2.0"
+    },
+    "devDependencies": {
+        "dotenv": "^8.2.0",
+        "nodemon": "^2.0.4"
+    }
 }
