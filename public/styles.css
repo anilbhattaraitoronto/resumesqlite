@@ -29,11 +29,11 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 8px ;
+    padding: 24px ;
     max-width: 1000px;
     width: 98%;
     margin: auto;
-    box-shadow: 0 0 1px white;
+    box-shadow: 1px 1px 0 gray;
 }
 #menu-show-button, #menu-close-button{
     position: absolute;
@@ -47,6 +47,13 @@ a{
 
 .masthead > a{
     font-size: 1.5em;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    margin: 4px;
+    transition: 250ms all ease-in-out;
+}
+.masthead > a:hover{
+    border-color: green;
 }
 .resume-items{
     display: flex;
