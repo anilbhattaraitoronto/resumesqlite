@@ -23,17 +23,18 @@ a{
 .main-header{
     width: 100%;
     margin: auto;
+    background: white;
 }
 .top-nav{
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px ;
+    padding: 20px 0 ;
     max-width: 1000px;
     width: 98%;
     margin: auto;
-    box-shadow: 1px 1px 0 gray;
+    /* border: 1px solid rgb(119, 170, 187); */
 }
 #menu-show-button, #menu-close-button{
     position: absolute;
@@ -48,9 +49,10 @@ a{
 .masthead > a{
     font-size: 1.5em;
     padding: 8px;
-    border: 1px solid rgba(0, 0, 0, 0.178);
+    border: 1px solid rgba(0, 0, 0, 0.075);
     margin: 4px;
     transition: 250ms all ease-in-out;
+    border-radius: 8px;
 }
 .masthead > a:hover{
     border-color: green;
@@ -77,10 +79,10 @@ a{
 }
 
 .main-content{
-    width: 100%;
+    width: 98%;
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: 8px;
     overflow:auto;
 }
 
@@ -92,6 +94,14 @@ footer{
     padding: 10px 0;
     color: rgba(0, 0, 0, 0.596);
     font-size: .9em;
+    line-height: 1.7;
+}
+.fa{
+    padding: 4px;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0.596);
+    /* border: 1px solid green; */
+    /* background: white; */
 }
 @media (max-width:700px){
     #menu-show-button{
@@ -100,6 +110,11 @@ footer{
         cursor: pointer;
         padding: 0 2px;
         border: 1px solid rgba(0, 0, 0, 0.24);
+        border-radius: 4px;
+    }
+    #menu-show-button:hover{
+        border-color: green;
+        color: green;
     }
     .resume-items{
         position: absolute;
@@ -121,14 +136,20 @@ footer{
     }
     #menu-close-button{
         position: absolute;
-        top: 2px;
-        right: 2px;
-        padding: 0 2px;
+        top: 0;
+        right: 0;
+        padding: 0 8px;
         border: 1px solid rgba(0, 0, 0, 0.24);
         transform: scale(1);
         font-size: .9em;
         cursor: pointer;
+        border-radius: 2px;
     }
+    #menu-close-button:hover{
+        border-color: green;
+        color: green;
+    }
+    
     .resume-items.show{
         z-index: 20;
         
