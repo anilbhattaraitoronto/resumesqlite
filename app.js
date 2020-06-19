@@ -17,7 +17,7 @@ const db = new sqlite3.Database('./databases/resumedb.sqlite', sqlite3.OPEN_READ
     }
     console.log("Connected to resumedb SQlite database");
 });
-//create database tables
+//create database tables/execute dbSchema
 db.exec(dbSchema, (err) => {
     if (err) {
         console.log(err)
@@ -27,6 +27,8 @@ db.exec(dbSchema, (err) => {
 })
 //close database
 if (process.env.NODE_ENV !== 'production') {
+
+
     db.close((err) => {
         if (err) {
             console.log(err)

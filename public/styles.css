@@ -56,6 +56,7 @@ a{
 }
 .masthead > a:hover{
     border-color: green;
+    color: green;
 }
 .resume-items{
     display: flex;
