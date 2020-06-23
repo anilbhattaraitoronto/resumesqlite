@@ -1,8 +1,11 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('education')
-})
+router.get("/", (req, res) => {
+  res.render(
+    "education",
+    { title: "Educational Qualifications", user: req.session.user },
+  );
+});
 
-module.exports = router
+module.exports = router;

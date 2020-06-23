@@ -12,6 +12,12 @@
             <li><a href="/education" class="main-link">Education</a></li>
             <li><a href="/blogs" class="main-link">Blogs</a></li>
             <li><a href="/about" class="main-link">About</a></li>
+            <% if (!locals.user) {%>
+            <li><a href="/users/userauth" class="main-link">Login/Register</a></li>
+            <%}%>
+            <% if (locals.user) {%>
+            <a href="/users/logout">Logout</a>
+            <%}%>
         </ul>
 
     </nav>

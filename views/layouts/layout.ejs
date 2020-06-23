@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Resume in Node for Anil Bhattarai using Sqlite3 database engine</title>
+    <link rel="stylesheet" href="/styles.css">
+    <title><% if (locals.title){%><%= title %> <%}%> | Resume of Dr Anil Bhattarai, PhD</title>
 </head>
 
 <body>
+    
+
     <section class="app-wrapper">
         <%- include('./partials/topnav') %>
-        <%- body %>
+
+        <div id="main-content">
+            <%- include('./partials/errorMessage') %>
+            <%- include('./partials/successMessage') %>
+            <%- body %>
+        </div>
         <%- include('./partials/footer') %>
 
-    </section>
-    <script src="ui.js"></script>
-</body>
+        </section>
+        <script src="/ui.js" type="module"></script>
+        </body>
 
 </html>

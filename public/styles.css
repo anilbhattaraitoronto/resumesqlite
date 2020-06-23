@@ -4,10 +4,10 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: Arial;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 body{
-    background: lightblue;
+    /* background: lightblue; */
     width: 100%;
     margin: auto;
 }
@@ -15,22 +15,38 @@ a{
     text-decoration: none;
     color: unset;
 }
+input, label{
+    display: block;
+}
+.page-title{
+    text-align: center;
+    padding: 8px 0;
+}
 
 .app-wrapper{
     position: relative;
+    width: 100%;
+    /* min-height: 100vh; */
+}
+#main-content{
     min-height: 100vh;
+    max-width: 1000px;
+    margin: auto;
 }
 .main-header{
+    position: sticky;
+    top: 0;
     width: 100%;
     margin: auto;
     background: white;
+    box-shadow: 0 0 2px gray;
 }
 .top-nav{
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0 ;
+    padding: 4px 0 ;
     max-width: 1000px;
     width: 98%;
     margin: auto;
@@ -48,15 +64,15 @@ a{
 
 .masthead > a{
     font-size: 1.5em;
-    padding: 8px;
+    padding: 2px;
     border: 1px solid rgba(0, 0, 0, 0.075);
     margin: 4px;
     transition: 250ms all ease-in-out;
     border-radius: 8px;
 }
 .masthead > a:hover{
-    border-color: green;
-    color: green;
+    border-color: rgb(85, 63, 4);
+    color: rgb(85, 63, 4);
 }
 .resume-items{
     display: flex;
@@ -68,34 +84,49 @@ a{
 }
 .resume-items > li{
     list-style-type: none;
-    padding: 0 16px;
+    padding: 0 12px;
     text-align: right;
     cursor: pointer;
 }
 .main-link{
     letter-spacing: 1px;
+    font-size: 16px;
+    color: rgb(83, 72, 6);
+    /* font-weight: bold; */
 }
 .main-link:hover{
-    color:green;
+    color:rgb(19, 16, 1);
 }
 
 .main-content{
     width: 98%;
     max-width: 1000px;
-    margin: auto;
-    padding: 8px;
+    min-height: 100vh;
+    margin: 8px auto;
+    padding: 8px 0;
     overflow:auto;
+    scroll-behavior: smooth;
+    
+}
+img{
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    /* height: 300px; */
+    object-fit: cover;
+    margin: auto;
 }
 
 footer{
-    position: absolute;
-    bottom: 0;
+    
     text-align: center;
     width: 100%;
     padding: 10px 0;
     color: rgba(0, 0, 0, 0.596);
     font-size: .9em;
     line-height: 1.7;
+    background: rgb(212, 208, 208);
+    box-shadow: 0 -2px 0 lightgray;
 }
 .fa{
     padding: 4px;
@@ -104,7 +135,56 @@ footer{
     /* border: 1px solid green; */
     /* background: white; */
 }
-@media (max-width:700px){
+
+
+/* Styles for auth forms */
+
+.auth-form{
+    width: 98%;
+    max-width: 450px;
+    margin: 8px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 2px gray;
+}
+.form-title{
+    text-align: center;
+}
+.auth-form >label, .auth-form > input{
+    width: 320px;
+    margin: 2px auto;
+    padding: 4px;
+    font-size: 16px;
+}
+.auth-form > input[type="submit"]{
+    all: unset;
+    cursor: pointer;
+    display: block;
+    width: 314px;
+    margin: 20px auto;
+    padding: 4px;
+    background: lightblue;
+    color: black;
+    text-align: center;
+    transition: 250ms all ease-in-out;
+    font-size: 18px;
+    font-weight: 600;
+}
+.auth-form > input[type="submit"]:hover{
+    background: rgb(98, 155, 173);
+}
+
+/* Styling success and error messages */
+
+.errors, .successes{
+    text-align: center;
+    padding: 8px 0; 
+}
+.successes{
+    color: green;
+}
+
+@media (max-width:750px){
     #menu-show-button{
         transform: scale(1);
         transform: translateY(-50%);
@@ -125,11 +205,11 @@ footer{
         flex-direction: column;
         justify-content: start;
         padding: 8px;
-        height: 250px;
+        height: auto;
         width: 150px;
         text-align: center;
         z-index: 20;
-        background: lightblue;
+        background: white;
         box-shadow: 0 0 2px black;
     }
     .resume-items > li{
